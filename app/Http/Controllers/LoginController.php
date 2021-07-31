@@ -13,6 +13,6 @@ class LoginController extends Controller
 
     public function responden()
     {
-        return view('users.dashboardLiterasi');
+        return view('dashboard.dashboardLiterasi');
     }
 }

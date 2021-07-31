@@ -22,7 +22,6 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="{{ asset('style/assets/css/fontawesome-all.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('style/assets/css/fontawesome.css') }}" />
-    <link rel="stylesheet" href="{{ asset('style/assets/css/particles.css') }}" />
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

@@ -40,12 +40,16 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     // cek_login
     Route::group(['middleware' => ['cek:admin']], function () {
-        Route::get('dashboardLiterasi', [LoginController::class, 'admin'])->name('admin');
+        Route::get('dashboard_literasi', [LoginController::class, 'admin'])->name('admin');
     });
 
     Route::group(['middleware' => ['cek:responden']], function () {
-        Route::get('dashboardLiterasi', [LoginController::class, 'responden'])->name('responden');
+        Route::get('dashboard_literasi', [LoginController::class, 'responden'])->name('responden');
     });
+
+    // Chart Dashboard
+    Route::get('dashboard_literasi', [ChartController::class, 'chartDashboardLiterasi'])->name('dashboardLiterasi');
+    Route::get('dashboard_kepuasan', [ChartController::class, 'chartDashboardKepuasan'])->name('dashboardKepuasan');
 
     // Kelola Akun
     Route::get('kelola_akun/index', [AkunController::class, 'index'])->name('kelola_akun');
@@ -85,8 +89,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('index', [ProfileController::class, 'index'])->name('profile');
     Route::get('profile/{id}', [ProfileController::class, 'edit'])->name('edit_profile');
     Route::POST('profile/{id}', [ProfileController::class, 'update'])->name('edit_profile');
-
-    // Chart Dashboard
-    Route::get('dashboard_literasi', [ChartController::class, 'chartDashboardLiterasi'])->name('dashboardLiterasi');
-    Route::get('dashboard_kepuasan', [ChartController::class, 'chartDashboardKepuasan'])->name('dashboardKepuasan');
+    
 });

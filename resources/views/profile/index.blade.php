@@ -1,6 +1,5 @@
 @extends('layout.main')
 
-<<<<<<< HEAD
 @section('title', 'Profile |')
 
 @section('content')
@@ -71,38 +70,5 @@
             </div>
         </div>
         <!--/User profile content-->
-=======
-@section('title', 'Profile')
-
-@section('content')
-
-    <div class="container mt-3">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Nama Lengkap</label>
-            <input type="text" name="nama" class="form-control" value="{{ $index->nama }}" id="exampleInputEmail1"
-                aria-describedby="emailHelp" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">Nomor Telepon</label>
-            <input type="text" name="nomor_hp" class="form-control" value="{{ $index->identitas->nomor_hp }}" id=""
-                required>
-        </div>
-
-        <div class="form-group">
-            <label for="">Alamat</label>
-            <input type="text" name="alamat" value="{{ $index->identitas->alamat }}" class="form-control" id="" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">Photo</label>
-            <p>
-                <img src="{{ url('gambar/', $index->photo) }}" alt="">
-        </div>
-
-        <a href="{{ route('edit_profile', $index->id) }}" class="btn btn-primary">Edit</a>
-        <a href="{{ route('kelola_akun') }}" class="btn btn-danger">Back</a>
-
->>>>>>> 9679192e82569b6d98b6bafe3a6050c208595f37
     </div>
 @endsection

@@ -25,9 +25,9 @@ class AuthController extends Controller
             $user = Auth::user();
 
             if ($user->status == 'admin') {
-                return redirect()->intended('dashboardLiterasi');
+                return redirect()->intended('dashboard_literasi');
             } elseif ($user->status == 'responden') {
-                return redirect()->intended('dashboardLiterasi');
+                return redirect()->intended('dashboard_literasi');
             } else {
                 return redirect()->route('login');
                 // return redirect()->back();

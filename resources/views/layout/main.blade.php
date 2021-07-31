@@ -110,7 +110,6 @@
                     <div class="sidebar-menu-container">
                         <ul class="sidebar-menu mb-4">
                             <li class="parent">
-<<<<<<< HEAD
 
                                 @if (Auth::user()->status == 'admin')
 
@@ -127,28 +126,6 @@
                                                 class="kuesioner-tab ml-4"><i class="fa fa-angle-right mr-2"></i>
                                                 Kepuasan TIK</a></li>
                                     </ul>
-=======
-                                {{-- hak askses buat admin --}}
-                                @if (Auth::user()->status == 'admin')
-
-                                    {{-- <li class="parent"> --}}
-                                    <a href="#" onclick="toggle_menu('kuesioner'); return false" class=""><i
-                                            class="fa fa-file mr-3"></i>
-                                        <span class="none"> Chart Diagram<i
-                                                class="fa fa-angle-down pull-right align-bottom"></i></span>
-                                    </a>
-                                    <ul class="children" id="kuesioner">
-                                        <li class="child"><a href="{{ route('dashboard') }}" class="">
-                                                <i class="fa fa-dashboard mr-3"> </i>
-                                                <span class="none">Dashboard </span>
-                                            </a></li>
-                                        <li class="child"><a href="{{ route('dashboard2') }}" class="">
-                                                <i class="fa fa-dashboard mr-3"> </i>
-                                                <span class="none">Dashboard 2 </span>
-                                            </a></li>
-                                    </ul>
-                                    {{-- </li> --}}
->>>>>>> 9679192e82569b6d98b6bafe3a6050c208595f37
 
                                     {{-- <a href="{{ route('dashboard') }}" class="">
                                         <i class="fa fa-dashboard mr-3"> </i>
@@ -159,44 +136,9 @@
                                         <i class="fa fa-user-plus mr-3" aria-hidden="true"></i>
                                         <span class="none">Kelola Akun </span>
                                     </a>
-<<<<<<< HEAD
                             </li>
 
                             <li class="parent">
-=======
-
-                                    <a href="{{ route('kuisioner') }}" class="">
-                                        <i class="fa fa-user-plus mr-3" aria-hidden="true"></i>
-                                        <span class="none">Kuisioner </span>
-                                    </a>
-
-                                    <a href="{{ route('index_response') }}" class="">
-                                        <i class="fa fa-user-plus mr-3" aria-hidden="true"></i>
-                                        <span class="none">Responden </span>
-                                    </a>
-
-                                @endif
-                                {{-- !hak askses buat admin --}}
-
-                                {{-- hak akses buat responden --}}
-
-                                @if (Auth::user()->status == 'responden')
-
-                                    <a href="{{ route('dashboard') }}" class="">
-                                        <i class="fa fa-dashboard mr-3"> </i>
-                                        <span class="none">Dashboard </span>
-                                    </a>
-
-                                    <a href="{{ route('index_response') }}" class="">
-                                        <i class="fa fa-user-plus mr-3" aria-hidden="true"></i>
-                                        <span class="none">Responden </span>
-                                    </a>
-                                @endif
-
-                                {{-- hak akses buat responden --}}
-                            </li>
-                            {{-- <li class="parent">
->>>>>>> 9679192e82569b6d98b6bafe3a6050c208595f37
                                 <a href="#" onclick="toggle_menu('kuesioner'); return false" class=""><i
                                         class="fa fa-th-list mr-3"></i>
                                     <span class="none"> Kuesioner<i
@@ -210,7 +152,6 @@
                                             class="kuesioner-tab ml-4"><i class="fa fa-angle-right mr-2"></i>
                                             Kepuasan TIK</a></li>
                                 </ul>
-<<<<<<< HEAD
                             </li>
                             @endif
 
@@ -251,9 +192,6 @@
                                     <span class="none">Kuesioner </span>
                                 </a> --}}
                             @endif
-=======
-                            </li> --}}
->>>>>>> 9679192e82569b6d98b6bafe3a6050c208595f37
                         </ul>
                     </div>
                     <!--Sidebar Navigation Menu-->
@@ -269,11 +207,7 @@
                 <!--Footer-->
                 <footer class="row mt-5 mb-4 footer">
                     <div class="col-sm-8">
-<<<<<<< HEAD
                         <span>&copy;designed by <a class="text-theme" href="#">Muhammad Rifqiandra</a></span>
-=======
-                        <span>&copy;designed by <a class="text-info" href="#">Rise.Dev</a></span>
->>>>>>> 9679192e82569b6d98b6bafe3a6050c208595f37
                     </div>
                     {{-- <div class="col-sm-4 text-right">
                         <a href="#" class="ml-2">Contact Us</a>
@@ -301,12 +235,9 @@
     <!--Custom Js Script-->
     <script src="{{ asset('style/assets/js/custom.js') }}"></script>
     <!--Custom Js Script-->
-<<<<<<< HEAD
     <script type="text/javascript">
 
     </script>
-=======
->>>>>>> 9679192e82569b6d98b6bafe3a6050c208595f37
     @yield('footer')
 </body>
 
