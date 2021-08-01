@@ -28,7 +28,7 @@ class ChartController extends Controller
 
         $response = $responLiterasi->keys();
         $total_response = $responLiterasi->values();
-        return view('dashboard.dashboardKepuasan', ['TotalRespon'=>$total_response, 'Respon'=>$response]);
+        return view('dashboard.dashboardLiterasi', ['TotalRespon'=>$total_response, 'Respon'=>$response]);
 
         // $response = $responLiterasi->keys();
         // $total_response = $responLiterasi->values();

@@ -99,11 +99,7 @@ class KuisionerController extends Controller
         $delete = Kuisioner::find($id_kuisioner);
         $delete->delete();
 
-<<<<<<< HEAD
         session()->flash('delete', 'Data berhasil dihapus!');
-=======
-        session()->flash('delete', 'Selamat Data Sudah berhasil Dihapus');
->>>>>>> 9679192e82569b6d98b6bafe3a6050c208595f37
         return redirect()->route('kuisioner');
     }
 }
