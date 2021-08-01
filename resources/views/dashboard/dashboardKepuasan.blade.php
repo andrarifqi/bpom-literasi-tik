@@ -22,7 +22,13 @@
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: <?php echo json_encode($Respon); ?>,
+                labels: [
+                    'Sangat Tidak Setuju',
+                    'Tidak Setuju',
+                    'Tidak Tahu',
+                    'Setuju',
+                    'Sangat Setuju'
+                ],
                 datasets: [{
                     label: 'Total Responden',
                     data: <?php echo json_encode($TotalRespon); ?>,

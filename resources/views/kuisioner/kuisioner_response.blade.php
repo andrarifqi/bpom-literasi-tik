@@ -4,10 +4,8 @@
 
 @section('content')
 
-    <h5 class="mb-0"><strong>Kuesioner Literasi TIK</strong></h5>
-    <span class="text-secondary"><a href="{{ route('kuisioner') }}">Kuesioner</a> <i class="fa fa-angle-right"></i>
-        Literasi
-        TIK</span>
+    <h5 class="mb-3"><strong>Kuesioner Literasi TIK</strong></h5>
+
     <div class="mt-4 mb-3 p-3 button-container bg-white border shadow-sm">
         <h6 class="mb-3"><strong>Petunjuk Pengisian.</strong></h6>
         <p class="mb-3">Berilah jawaban atas pertanyaan berikut dengan memilih pilihan jawaban. Pertanyaan berikut ini
