@@ -36,8 +36,8 @@ class KuisionerController extends Controller
         $store = new Kuisioner;
 
         // deklarasikan model nya
-        $store->nama = $request->nama;
         $store->kuisioner = $request->kuisioner;
+        $store->tahun_kuisioner = $request->tahun_kuisioner;
 
         // simpan datanya
         $store->save();
@@ -79,8 +79,9 @@ class KuisionerController extends Controller
     public function update(Request $request, $id_kuisioner)
     {
         $update = Kuisioner::find($request->id_kuisioner);
-        $update->nama = $request->nama;
         $update->kuisioner = $request->kuisioner;
+        $update->tahun_kuisioner = $request->tahun_kuisioner;
+        
 
         $update->save();
 

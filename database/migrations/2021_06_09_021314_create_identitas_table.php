@@ -16,8 +16,9 @@ class CreateIdentitasTable extends Migration
         Schema::create('identitas', function (Blueprint $table) {
             $table->bigIncrements('id_identitas');
             $table->string('username', '100')->unique();
-            $table->text('alamat');
-            $table->string('nomor_hp', '50');
+            $table->string('jenis_kelamin', '10');
+            $table->text('jabatan_pegawai');
+            $table->text('unit_kerja');
             $table->timestamps();
         });
     }

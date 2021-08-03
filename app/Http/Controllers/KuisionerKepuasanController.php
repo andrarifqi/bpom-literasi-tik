@@ -40,8 +40,9 @@ class KuisionerKepuasanController extends Controller
         $store = new KuisionerKepuasan;
 
         // deklarasikan model nya
-        $store->nama = $request->nama;
         $store->kuisioner_kepuasan = $request->kuisioner_kepuasan;
+        $store->tahun_kuisioner = $request->tahun_kuisioner;
+        
         
         // simpan datanya
         $store->save();
@@ -82,8 +83,9 @@ class KuisionerKepuasanController extends Controller
     public function update(Request $request, $id_kuisioner_kepuasan)
     {
         $update = KuisionerKepuasan::find($request->id_kuisioner_kepuasan);
-        $update->nama = $request->nama;
         $update->kuisioner_kepuasan = $request->kuisioner_kepuasan;
+        $update->tahun_kuisioner = $request->tahun_kuisioner;
+        
         
         $update->save();
 

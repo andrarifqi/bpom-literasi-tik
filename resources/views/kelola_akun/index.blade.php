@@ -28,10 +28,12 @@
                     <thead>
                         <tr class="text-center text-theme">
                             <th scope="col">No</th>
-                            <th scope="col">Nama</th>
                             <th scope="col">Username</th>
-                            <th scope="col">Alamat</th>
-                            <th scope="col">Nomor Hp</th>
+                            <th scope="col">Nama Pegawai</th>
+                            <th scope="col">Jenis Kelamin</th>
+                            <th scope="col">Jabatan Pegawai</th>
+                            <th scope="col">E-Mail</th>
+                            <th scope="col">Unit Kerja</th>
                             <th scope="col">Status</th>
                             <th scope="col"></th>
                         </tr>
@@ -41,10 +43,12 @@
                             {{-- @dd($i->identitas->alamat) --}}
                             <tr class="text-center">
                                 <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $i->nama }}</td>
                                 <td>{{ $i->username }}</td>
-                                <td>{{ $i->identitas->alamat }}</td>
-                                <td>{{ $i->identitas->nomor_hp }}</td>
+                                <td>{{ $i->nama }}</td>
+                                <td>{{ $i->identitas->jenis_kelamin }}</td>
+                                <td>{{ $i->identitas->jabatan_pegawai }}</td>
+                                <td>{{ $i->email }}</td>
+                                <td>{{ $i->identitas->unit_kerja }}</td>
                                 <td>{{ $i->status }}</td>
                                 <td>
                                     <div class="btn-group">

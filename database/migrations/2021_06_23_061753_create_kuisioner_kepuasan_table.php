@@ -15,8 +15,8 @@ class CreateKuisionerKepuasanTable extends Migration
     {
         Schema::create('kuisioner_kepuasan', function (Blueprint $table) {
             $table->bigIncrements('id_kuisioner_kepuasan');
-            $table->string('nama', '100');
             $table->text('kuisioner_kepuasan');
+            $table->string('tahun_kuisioner', '4');
             $table->timestamps();
         });
     }

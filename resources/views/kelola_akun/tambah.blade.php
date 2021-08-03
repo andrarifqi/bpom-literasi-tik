@@ -9,7 +9,7 @@
             <form action="{{ route('akun_tambah') }}" method="POST">
                 @csrf
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Lengkap</label>
+                    <label for="">Nama Pegawai</label>
                     <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         required>
                 </div>
@@ -20,18 +20,23 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
+                    <label for="">Password</label>
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Nomor Telepon</label>
-                    <input type="text" name="nomor_hp" class="form-control" id="" required>
+                    <label for="">E-Mail</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputPassword1" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Alamat</label>
-                    <input type="text" name="alamat" class="form-control" id="" required>
+                    <label for="">Jenis Kelamin</label>
+                    <input type="text" name="jenis_kelamin" class="form-control" id="" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Jabatan Pegawai</label>
+                    <input type="text" name="jabatan_pegawai" class="form-control" id="" required>
                 </div>
 
                 <div class="form-group text-right">

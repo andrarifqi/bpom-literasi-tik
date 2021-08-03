@@ -43,12 +43,24 @@
                                     <td>{{ Auth::user()->username }}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">No Telepon</th>
-                                    <td>{{ $index->identitas->nomor_hp }}</td>
+                                    <th scope="row">Jenis Kelamin</th>
+                                    <td>{{ $index->identitas->jenis_kelamin }}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Alamat</th>
-                                    <td>{{ $index->identitas->alamat }}</td>
+                                    <th scope="row">Jabatan Pegawai</th>
+                                    <td>{{ $index->identitas->jabatan_pegawai }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Unit Kerja</th>
+                                    <td>{{ $index->identitas->unit_kerja }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">E-Mail</th>
+                                    <td>{{ Auth::user()->email }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Status</th>
+                                    <td>{{ Auth::user()->status }}</td>
                                 </tr>
                                 {{-- <tr>
                                     <th scope="row">Nomor Telepon</th>

@@ -85,21 +85,23 @@ class ProfileController extends Controller
 
             // table user
             $update->nama = $request->nama;
+            $update->email = $request->email;
             $update->photo = $photo_name;
             $update->save();
 
             // table identitas
-            $update->identitas->nomor_hp = $request->nomor_hp;
-            $update->identitas->alamat = $request->alamat;
+            $update->identitas->jabatan_pegawai = $request->jabatan_pegawai;
+            $update->identitas->unit_kerja = $request->unit_kerja;
             $update->identitas->save();
         } else {
             // table user
             $update->nama = $request->nama;
+            $update->email = $request->email;
             $update->save();
 
             // table identitas
-            $update->identitas->nomor_hp = $request->nomor_hp;
-            $update->identitas->alamat = $request->alamat;
+            $update->identitas->jabatan_pegawai = $request->jabatan_pegawai;
+            $update->identitas->unit_kerja = $request->unit_kerja;
             $update->identitas->save();
         }
 

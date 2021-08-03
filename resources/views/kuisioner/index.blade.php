@@ -28,8 +28,8 @@
                     <thead>
                         <tr class="text-center text-theme">
                             <th scope="col">No</th>
-                            <th scope="col">Name</th>
                             <th scope="col">Kuesioner</th>
+                            <th scope="col">Tahun Kuesioner</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -37,8 +37,8 @@
                         @foreach ($index as $i)
                             <tr class="text-center">
                                 <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $i->nama }}</td>
                                 <td>{{ $i->kuisioner }}</td>
+                                <td>{{ $i->tahun_kuisioner }}</td>
                                 <td>
                                     <div class="btn-group">
                                         <a href="{{ route('kuisioner_edit', $i->id_kuisioner) }}"

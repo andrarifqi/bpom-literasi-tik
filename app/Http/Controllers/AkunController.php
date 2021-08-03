@@ -41,14 +41,16 @@ class AkunController extends Controller
 
         $store->nama = $request->nama;
         $store->username = $request->username;
+        $store->username = $request->email;
         $store->password = Hash::make($request->password);
         $store->status = 'responden';
         $store->save();
 
         $identitas = new Identitas;
         $identitas->username = $request->username;
-        $identitas->nomor_hp = $request->nomor_hp;
-        $identitas->alamat = $request->alamat;
+        $identitas->jenis_kelamin = $request->jenis_kelamin;
+        $identitas->jabatan_pegawai = $request->jabatan_pegawai;
+        $identitas->unit_kerja = $request->unit_kerja;
         $identitas->save();
 
         $request->session()->flash('store', 'Data Berhasil Ditambahkan');
@@ -91,8 +93,8 @@ class AkunController extends Controller
         $update->nama = $request->nama;
         $update->save();
 
-        $update->identitas->alamat = $request->alamat;
-        $update->identitas->nomor_hp = $request->nomor_hp;
+        $update->identitas->jabatan_pegawai = $request->jabatan_pegawai;
+        $update->identitas->unit_kerja = $request->unit_kerja;
         $update->identitas->save();
 
 

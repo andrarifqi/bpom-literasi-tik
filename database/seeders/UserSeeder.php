@@ -19,15 +19,17 @@ class UserSeeder extends Seeder
         $user = new User;
         $user->nama = 'Admin';
         $user->username = 'admin';
+        $user->email = 'admin@example.com';
         $user->password = Hash::make('admin');
         $user->status = 'admin';
-        $user->photo = 'admin.jpg';
+        $user->photo = 'user.png';
         $user->save();
 
         $identitas = new Identitas;
         $identitas->username = 'admin';
-        $identitas->alamat = 'Padang';
-        $identitas->nomor_hp = '0812344454';
+        $identitas->jenis_kelamin = 'Laki-Laki';
+        $identitas->jabatan_pegawai = 'Staf';
+        $identitas->unit_kerja = 'PUSDATIN';
         $identitas->save();
     }
 }

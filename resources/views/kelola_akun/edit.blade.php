@@ -9,21 +9,21 @@
             <form action="{{ route('akun_edit', $edit->id) }}" method="POST">
                 @csrf
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Lengkap</label>
+                    <label for="">Nama Pegawai</label>
                     <input type="text" name="nama" class="form-control" value="{{ $edit->nama }}"
                         aria-describedby="emailHelp" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Nomor Telepon</label>
-                    <input type="text" name="nomor_hp" class="form-control" value="{{ $edit->identitas->nomor_hp }}" id=""
-                        required>
+                    <label for="">Jabatan Pegawai</label>
+                    <input type="text" name="jabatan_pegawai" class="form-control"
+                        value="{{ $edit->identitas->jabatan_pegawai }}" id="" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Alamat</label>
-                    <input type="text" name="alamat" value="{{ $edit->identitas->alamat }}" class="form-control" id=""
-                        required>
+                    <label for="">Unit Kerja</label>
+                    <input type="text" name="unit_kerja" value="{{ $edit->identitas->unit_kerja }}" class="form-control"
+                        id="" required>
                 </div>
 
                 <div class="form-group text-right">
