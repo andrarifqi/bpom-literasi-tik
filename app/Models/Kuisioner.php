@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Responden;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Kuisioner extends Model
 {
@@ -14,4 +15,8 @@ class Kuisioner extends Model
     protected $primaryKey = 'id_kuisioner';
 
     // protected $fillable = ['nama', 'kuisioner'];
+     public function responden()
+    {
+        return $this->hasMany(Responden::class);
+    }
 }

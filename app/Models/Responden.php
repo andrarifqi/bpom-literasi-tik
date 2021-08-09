@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Kuisioner;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Responden extends Model
 {
@@ -11,4 +12,9 @@ class Responden extends Model
 
     protected $table = 'responden';
     protected $primaryKey = 'id_responden';
+
+    public function kuisioner()
+    {
+        return $this->belongsTo(Kuisioner::class);
+    }
 }

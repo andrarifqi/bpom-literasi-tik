@@ -41,7 +41,7 @@ class AkunController extends Controller
 
         $store->nama = $request->nama;
         $store->username = $request->username;
-        $store->username = $request->email;
+        $store->email = $request->email;
         $store->password = Hash::make($request->password);
         $store->status = 'responden';
         $store->save();

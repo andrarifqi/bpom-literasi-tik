@@ -14,6 +14,8 @@
 
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="{{ asset('style/assets/css/bootstrap.min.css') }} ">
+    <link rel="stylesheet" href="{{ asset('style/assets/css/dataTables.bootstrap4.min.css') }} ">
+    <!--Bootstrap CSS-->
     <!--Custom style.css-->
     <link rel="stylesheet" href="{{ asset('style/assets/css/quicksand.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/css/style.css') }}">
@@ -26,7 +28,6 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
     <title>@yield('title') BPOM Literasi TIK</title>
 </head>
 
@@ -202,7 +203,11 @@
 
             <!--Content right-->
             <div class="col-sm-9 col-xs-12 content pt-3 pl-0">
-                @yield('content')
+                <div class="row mt-3">
+                    <div class="col-sm-12">
+                        @yield('content')
+                    </div>
+                </div>
 
                 <!--Footer-->
                 <footer class="row mt-5 mb-4 footer">
@@ -232,13 +237,20 @@
     <script src="{{ asset('style/assets/js/popper.min.js') }}"></script>
     <!--Bootstrap-->
     <script src="{{ asset('style/assets/js/bootstrap.min.js') }}"></script>
+    <!--Data Tables-->
+    <script src="{{ asset('style/assets/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('style/assets/js/dataTables.bootstrap4.min.js') }}"></script>
+    <!--Data Tables-->
     <!--Custom Js Script-->
     <script src="{{ asset('style/assets/js/custom.js') }}"></script>
     <!--Custom Js Script-->
     <script type="text/javascript">
 
     </script>
+
     @yield('footer')
+
+    @yield('scripts')
 </body>
 
 </html>

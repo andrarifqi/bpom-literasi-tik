@@ -9,6 +9,7 @@ use App\Http\Controllers\ChartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResponseController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HighChartController;
 use App\Http\Controllers\KuisionerController;
 use App\Http\Controllers\ResponKepuasanController;
@@ -48,8 +49,8 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     // Chart Dashboard
-    Route::get('dashboard_literasi', [ChartController::class, 'chartDashboardLiterasi'])->name('dashboardLiterasi');
-    Route::get('dashboard_kepuasan', [ChartController::class, 'chartDashboardKepuasan'])->name('dashboardKepuasan');
+    Route::get('dashboard_literasi', [DashboardController::class, 'dashboard_literasi'])->name('dashboardLiterasi');
+    Route::get('dashboard_kepuasan', [DashboardController::class, 'dashboard_kepuasan'])->name('dashboardKepuasan');
 
     // Kelola Akun
     Route::get('kelola_akun/index', [AkunController::class, 'index'])->name('kelola_akun');
@@ -78,11 +79,13 @@ Route::group(['middleware' => ['auth']], function () {
     // Response
     Route::get('responden', [ResponseController::class, 'index'])->name('index_response');
     Route::get('kuisioner_responden', [ResponseController::class, 'create'])->name('response');
-    Route::POST('kuisioner_responden', [ResponseController::class, 'response'])->name('response');
+    Route::get('kuisioner_responden_2021', [ResponseController::class, 'create2021'])->name('response2021');
+    Route::POST('kuisioner_responden', [ResponseController::class, 'response'])->name('response_tambah');
 
     //Respon Kepuasan
     Route::get('respon_kepuasan', [ResponKepuasanController::class, 'index'])->name('index_respon_kepuasan');
     Route::get('kuisioner_respon_kepuasan', [ResponKepuasanController::class, 'create'])->name('respon_kepuasan');
+    Route::get('kuisioner_respon_kepuasan_2021', [ResponKepuasanController::class, 'create2021'])->name('respon_kepuasan_2021');
     Route::POST('kuisioner_respon_kepuasan', [ResponKepuasanController::class, 'respon_kepuasan'])->name('respon_kepuasan');
     
     //Edit Profile

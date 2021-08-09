@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kuisioner;
 use App\Models\Responden;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class ResponseController extends Controller
@@ -27,18 +28,26 @@ class ResponseController extends Controller
      */
     public function create()
     {
-        $response = Kuisioner::all();
+        $response = Kuisioner::all()->where('tahun_kuisioner', '2020');
+        return view('kuisioner.kuisioner_response', ['response' => $response]);
+    }
+
+    public function create2021()
+    {
+        $response = Kuisioner::all()->where('tahun_kuisioner', '2021');
         return view('kuisioner.kuisioner_response', ['response' => $response]);
     }
 
     public function response(Request $request)
-    {
+    {    
         $jum_response = $request->response;
         $kuisioner = $request->kuisioner;
+        $tahun_kuisioner = $request->tahun_kuisioner;
         for ($i = 0; $i < count($jum_response); $i++) {
             $response = new responden;
             $response->id_user = Auth::User()->id;
             $response->kuisioner = $kuisioner[$i];
+            $response->tahun_kuisioner = $tahun_kuisioner;
             $response->response = $jum_response[$i];
             $response->save();
         }

@@ -17,6 +17,7 @@ class CreateRespondenTable extends Migration
             $table->bigIncrements('id_responden');
             $table->bigInteger('id_user');
             $table->string('kuisioner');
+            $table->string('tahun_kuisioner', '4');
             $table->string('response');
             $table->timestamps();
         });
