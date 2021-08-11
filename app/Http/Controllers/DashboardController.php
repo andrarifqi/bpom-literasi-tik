@@ -8,8 +8,10 @@ use App\Models\Kuisioner;
 use App\Models\Responden;
 use Illuminate\Http\Request;
 use App\Models\ResponKepuasan;
+use App\Exports\DashboardExport;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DashboardController extends Controller
 {
@@ -42,4 +44,5 @@ class DashboardController extends Controller
 
         return view('dashboard.dashboardKepuasan', ['respon_kepuasan'=>$responKepuasan]);
     }
+
 }

@@ -22,11 +22,13 @@
     <!--Datatable-->
     <div class="">
         <h6 class="my-2">Data Kuesioner Literasi TIK</h6>
+        <a href="{{ route('export_excel_literasi') }}" class="btn btn-outline-theme btn-sm"><i
+                class="fa fa-download mr-2" aria-hidden="true"></i><strong>Download</strong></a>
     </div>
     <div class="">
-        <table id="table-kuisioner" class="table table-responsive table-bordered table-hover">
-            <thead class="text-theme">
-                <tr class=" text-center">
+        <table id="table-kuisioner" class="table table-responsive table-bordered table-hover table-md">
+            <thead class="text-theme text-center">
+                <tr class=" ">
                     <th>Kuesioner</th>
                     <th>Tahun</th>
                     <th>Sangat Tidak Setuju</th>
@@ -40,12 +42,12 @@
                 @foreach ($respon_literasi as $respon)
                     <tr>
                         <td>{{ $respon->kuisioner }}</td>
-                        <td>{{ $respon->tahun_kuisioner }}</td>
-                        <td>{{ $respon->sum_sts }}</td>
-                        <td>{{ $respon->sum_ts }}</td>
-                        <td>{{ $respon->sum_th }}</td>
-                        <td>{{ $respon->sum_s }}</td>
-                        <td>{{ $respon->sum_ss }}</td>
+                        <td class="text-center">{{ $respon->tahun_kuisioner }}</td>
+                        <td class="text-center">{{ $respon->sum_sts }}</td>
+                        <td class="text-center">{{ $respon->sum_ts }}</td>
+                        <td class="text-center">{{ $respon->sum_th }}</td>
+                        <td class="text-center">{{ $respon->sum_s }}</td>
+                        <td class="text-center">{{ $respon->sum_ss }}</td>
                     </tr>
                 @endforeach
             </tbody>
@@ -74,7 +76,7 @@
                 this.api().columns(1).every(function() {
                     var column = this;
                     var select = $(
-                            '<select><option value=""></option></select>'
+                            '<select><option value="">Filter Tahun</option></select>'
                         )
                         .appendTo($(column.footer()).empty())
                         .on('change', function() {

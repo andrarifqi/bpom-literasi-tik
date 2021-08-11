@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ChartController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ExportController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResponseController;
 use App\Http\Controllers\DashboardController;
@@ -92,5 +93,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('index', [ProfileController::class, 'index'])->name('profile');
     Route::get('profile/{id}', [ProfileController::class, 'edit'])->name('edit_profile');
     Route::POST('profile/{id}', [ProfileController::class, 'update'])->name('edit_profile');
-    
+
+    // Export Excel
+    Route::get('export-literasi', [ExportController::class, 'export_excel_literasi'])->name('export_excel_literasi');
+    Route::get('export-kepuasan', [ExportController::class, 'export_excel_kepuasan'])->name('export_excel_kepuasan');
 });
